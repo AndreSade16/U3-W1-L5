@@ -32,13 +32,16 @@ class NetflixNavbar extends Component {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0 me-3">
-                <li className="nav-item">
+                <li
+                  className="nav-item"
+                  onClick={() => this.props.setPage({ currentPage: "home" })}
+                >
                   <a className="nav-link active" aria-current="page" href="#">
                     Home
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link fw-bold text-white" href="#">
+                  <a className="nav-link text-white" href="#">
                     TV Shows
                   </a>
                 </li>
@@ -59,9 +62,11 @@ class NetflixNavbar extends Component {
                 </li>
               </ul>
               <div className="row align-items-start align-items-lg-center pe-4 w-25 w-lg-25 justify-content-end px-lg-0 text-lg-center flex-column flex-lg-row g-3 g-lg-0 text-white flex-nowrap">
-                <i className="fas fa-search col-6 col-lg-2"></i>
-                <p className="fw-bold mb-0 col-6 col-lg-2">KIDS</p>
-                <i className="fas fa-bell col-6 col-lg-2"></i>
+                <i type="button" className="fas fa-search col-6 col-lg-2"></i>
+                <p type="button" className="fw-bold mb-0 col-6 col-lg-2">
+                  KIDS
+                </p>
+                <i type="button" className="fas fa-bell col-6 col-lg-2"></i>
                 <Dropdown className="dropdown col-6 col-lg-2 p-0">
                   <Dropdown.Toggle
                     className="dropdown-toggle p-0 border-0 w-100 w-lg-50 pe-4 bg-black"
@@ -76,9 +81,21 @@ class NetflixNavbar extends Component {
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu className="dropdown-menu dropdown-menu-end">
-                    <Dropdown.Item>Profile</Dropdown.Item>
+                    <Dropdown.Item
+                      onClick={() =>
+                        this.props.setPage({ currentPage: "profile" })
+                      }
+                    >
+                      Profile
+                    </Dropdown.Item>
                     <Dropdown.Item>Ciaone</Dropdown.Item>
-                    <Dropdown.Item>Settings</Dropdown.Item>
+                    <Dropdown.Item
+                      onClick={() =>
+                        this.props.setPage({ currentPage: "settings" })
+                      }
+                    >
+                      Settings
+                    </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
               </div>

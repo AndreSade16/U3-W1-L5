@@ -19,10 +19,16 @@ class NetflixHomeMain extends Component {
                 >
                   Genres
                 </Dropdown.Toggle>
-                <Dropdown.Menu className="bg-black">
-                  <Dropdown.Item className="text-white">Thriller</Dropdown.Item>
-                  <Dropdown.Item className="text-white">Romcom</Dropdown.Item>
-                  <Dropdown.Item className="text-white">Drama</Dropdown.Item>
+                <Dropdown.Menu className="bg-dark">
+                  <Dropdown.Item className="text-white text-bg-dark">
+                    Thriller
+                  </Dropdown.Item>
+                  <Dropdown.Item className="text-white text-bg-dark">
+                    Romcom
+                  </Dropdown.Item>
+                  <Dropdown.Item className="text-white text-bg-dark">
+                    Drama
+                  </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
               <div id="side-menu" className="d-flex text-white col-2 w-auto">

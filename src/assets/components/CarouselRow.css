@@ -1,0 +1,22 @@
+.carousel-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  scrollbar-width: none;
+}
+
+.carousel-div {
+  width: 16.66%; /* 6 per riga */
+}
+
+@media (max-width: 992px) {
+  .carousel-div {
+    width: 25%; /* 4 per riga */
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-div {
+    width: 50%; /* 2 per riga */
+  }
+}

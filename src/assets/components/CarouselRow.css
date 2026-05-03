@@ -3,9 +3,8 @@
   overflow-x: auto;
   gap: 10px;
   scrollbar-width: none;
-  overscroll-behavior-x: contain;
   overflow-y: hidden;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: mandatory;
 }
 
 .carousel-div {

@@ -35,7 +35,17 @@ class CarouselRow extends Component {
       <div className="carousel-row d-flex g-0 ">
         {this.state.fetched.map((movie) => {
           return (
-            <div className="carousel-div flex-shrink-0" key={movie.imdbID}>
+            <div
+              className="carousel-div flex-shrink-0"
+              key={movie.imdbID}
+              type="button"
+              onClick={() =>
+                this.props.setPage({
+                  currentPage: "movie",
+                  clickedId: movie.imdbID,
+                })
+              }
+            >
               <img className="w-100 " src={movie.Poster} alt={movie.Title} />
             </div>
           );

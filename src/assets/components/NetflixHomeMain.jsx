@@ -43,15 +43,24 @@ class NetflixHomeMain extends Component {
           </div>
           <div className="row mt-4">
             <h3 className="fs-4 text-white pb-2">Harry Potter</h3>
-            <CarouselRow query="harry-potter" />
+            <CarouselRow
+              setPage={(value) => this.props.setPage(value)}
+              query="harry-potter"
+            />
           </div>
           <div className="row mt-4">
             <h3 className="fs-4 text-white pb-2">X-Men</h3>
-            <CarouselRow query="x-men" />
+            <CarouselRow
+              setPage={(value) => this.props.setPage(value)}
+              query="x-men"
+            />
           </div>
           <div className="row mt-4">
             <h3 className="fs-4 text-white pb-2">Mission: Impossible</h3>
-            <CarouselRow query="mission-impossible" />
+            <CarouselRow
+              setPage={(value) => this.props.setPage(value)}
+              query="mission-impossible"
+            />
           </div>
         </div>
       </main>

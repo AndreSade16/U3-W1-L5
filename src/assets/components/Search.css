@@ -1,0 +1,8 @@
+.search-cover {
+  transition: all 0.1s ease;
+}
+
+.search-cover:hover {
+  transform: scale(1.2);
+  border: 1px solid white;
+}

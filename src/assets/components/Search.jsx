@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import "./Search.css";
 
 class Search extends Component {
   state = {
@@ -11,7 +12,11 @@ class Search extends Component {
     return (
       <>
         <div className="flex-grow-1 d-flex justify-content-center align-items-center bg-black py-5 flex-column">
+          <label htmlFor="search-bar" className="text-white fs-3 fw-bold mb-3">
+            Search your show:
+          </label>
           <input
+            id="search-bar"
             className="bg-dark text-white rounded-pill border-0 py-1 px-3 w-50"
             type="text"
             value={this.state.inputValue}
@@ -53,7 +58,7 @@ class Search extends Component {
                       sm={6}
                       md={4}
                       lg={3}
-                      className="d-flex justify-content-center"
+                      className="search-cover d-flex justify-content-center p-0"
                       type="button"
                       onClick={() => {
                         this.props.setPage({

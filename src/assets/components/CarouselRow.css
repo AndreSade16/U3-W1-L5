@@ -4,12 +4,19 @@
   gap: 10px;
   scrollbar-width: none;
   overscroll-behavior-x: contain;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
 }
 
 .carousel-div {
   width: 16.66%;
   scroll-snap-align: start;
+  transition: all 0.1s ease;
+}
+
+.carousel-div:hover {
+  transform: scale(1.1);
+  border: 1px solid white;
 }
 
 @media (max-width: 992px) {

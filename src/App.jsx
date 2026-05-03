@@ -5,6 +5,7 @@ import NetflixNavbar from "./assets/components/NetflixNavbar";
 import Profile from "./assets/components/Profile";
 import Settings from "./assets/components/Settings";
 import MoviePage from "./assets/components/MoviePage";
+import Search from "./assets/components/Search";
 
 class App extends Component {
   state = {
@@ -30,6 +31,9 @@ class App extends Component {
             movieId={this.state.clickedId}
             setPage={(value) => this.setState(value)}
           />
+        )}
+        {this.state.currentPage === "search" && (
+          <Search setPage={(value) => this.setState(value)} />
         )}
         <NetflixFooter setPage={(value) => this.setState(value)} />
       </>

@@ -28,19 +28,19 @@ class MoviePage extends Component {
       <>
         <Container
           fluid={true}
-          className="d-flex justify-content-center bg-black py-5"
+          className="d-flex justify-content-center bg-black py-5 flex-grow-1 px-5"
         >
           {this.state.loading ? (
             <Spinner animation="border" role="status">
               <span className="visually-hidden">Loading...</span>
             </Spinner>
           ) : this.state.fetched.Title ? (
-            <div className="d-flex flex-column flex-md-row gap-3 text-white">
+            <div className="d-flex flex-column flex-md-row gap-3 text-white ">
               <img
                 src={this.state.fetched.Poster}
                 alt={this.state.fetched.title + " - poster"}
               />
-              <div id="movie-text" className="d-flex flex-column">
+              <div id="movie-text" className="d-flex flex-column py-3 py-md-0">
                 <h2 className="text-center">{this.state.fetched.Title}</h2>
                 <p>
                   <span className="fw-bold">Year:</span>{" "}
